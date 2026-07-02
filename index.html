@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Jean Felipe da Silva</title>
+    <meta
+      name="description"
+      content="Página inicial do curso WDD 131 – Fundamentos da Web Dinâmica, de Jean Felipe da Silva. Demonstração de HTML, CSS e JavaScript, desenvolvimento web dinâmico, BYU-Idaho."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/base.css" />
+
+    <script src="scripts/obterdatas.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span>WDD 131 – Fundamentos da Web Dinâmica</span>
+      <h1>Página Inicial</h1>
+      <nav>
+        <a href="https://www.linkedin.com/in/jeanfsilva/" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+        <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+        <a
+          href="https://www.churchofjesuschrist.org/study/scriptures?lang=por"
+          target="_blank"
+          rel="noopener"
+          >Escrituras</a
+        >
+        <a href="https://github.com/AkaMandakeru/wdd131" target="_blank" rel="noopener"
+          >Projeto Final</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <h1>Jean Felipe da Silva</h1>
+
+      <section class="card">
+        <h2>Sobre Mim</h2>
+        <img
+          src="imagens/profile.jpeg"
+          alt="Foto de perfil de Jean Felipe da Silva"
+          width="300"
+          height="200"
+          loading="lazy"
+        />
+        <p>
+          Sou estudante de desenvolvimento web no curso WDD 131 – Fundamentos da Web
+          Dinâmica. Nesta jornada, estou aprendendo a construir páginas interativas
+          usando HTML, CSS e JavaScript, aplicando boas práticas de acessibilidade e
+          desempenho.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Meus Interesses</h2>
+        <img
+          src="imagens/desktop.jpeg"
+          alt="Espaço de trabalho com um computador e código na tela"
+          width="300"
+          height="200"
+          loading="lazy"
+        />
+        <p>
+          Tenho grande interesse por tecnologia, programação e design de interfaces.
+          Gosto de resolver problemas e transformar ideias em soluções digitais
+          funcionais e agradáveis de usar.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="anoatual"></span> Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>
