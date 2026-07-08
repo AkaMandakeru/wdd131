@@ -1,0 +1,26 @@
+/* Estilos para viewports maiores (a partir de 40rem / ~640px) */
+@media (min-width: 40rem) {
+  /* Oculta o botão hambúrguer e mostra a navegação em linha */
+  #menu {
+    display: none;
+  }
+
+  nav,
+  nav.aberto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  nav a {
+    border-top: none;
+    border-radius: 4px;
+  }
+
+  /* Grade responsiva: colunas automáticas com largura mínima */
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}

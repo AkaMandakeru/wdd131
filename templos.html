@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Álbum do Templo - Jean Felipe da Silva</title>
+    <meta
+      name="description"
+      content="Álbum de fotos de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias, criado por Jean Felipe da Silva para o curso WDD 131."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/templos.css" />
+    <link rel="stylesheet" href="estilos/templos-grandes.css" />
+
+    <script src="scripts/templos.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="titulo-site">Álbum do Templo</span>
+      <button id="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+      <nav id="navegacao">
+        <a href="index.html">Página Inicial</a>
+        <a href="#">Antigo</a>
+        <a href="#">Novo</a>
+        <a href="#">Grande</a>
+        <a href="#">Pequeno</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Álbum do Templo</h1>
+
+      <div class="galeria">
+        <figure>
+          <img src="imagens/templos/salt-lake.jpg" alt="Templo de Salt Lake" loading="lazy" />
+          <figcaption>Salt Lake City, Utah — 1893 (Antigo)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/sao-paulo.jpg" alt="Templo de São Paulo Brasil" loading="lazy" />
+          <figcaption>São Paulo, Brasil — 1978</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/manti.jpg" alt="Templo de Manti Utah" loading="lazy" />
+          <figcaption>Manti, Utah — 1888 (Antigo)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/payson.jpg" alt="Templo de Payson Utah" loading="lazy" />
+          <figcaption>Payson, Utah — 2015 (Novo)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/bern.jpg" alt="Templo de Berna Suíça" loading="lazy" />
+          <figcaption>Berna, Suíça — 1955</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/mexico-city.jpg" alt="Templo da Cidade do México" loading="lazy" />
+          <figcaption>Cidade do México, México — 1983 (Grande)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/kirtland.jpg" alt="Templo de Kirtland Ohio" loading="lazy" />
+          <figcaption>Kirtland, Ohio — 1836 (Antigo)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/nauvoo.jpg" alt="Templo de Nauvoo Illinois" loading="lazy" />
+          <figcaption>Nauvoo, Illinois — 2002</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagens/templos/provo-city.jpg" alt="Templo da Cidade de Provo Utah" loading="lazy" />
+          <figcaption>Provo City Center, Utah — 2016 (Novo)</figcaption>
+        </figure>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="anoatual"></span> Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>
