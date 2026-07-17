@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Barcelona, Espanha - Jean Felipe da Silva</title>
+    <meta
+      name="description"
+      content="Página sobre Barcelona, Espanha, com dados do local e informações de clima, criada por Jean Felipe da Silva para o curso WDD 131."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/local.css" />
+
+    <script src="scripts/local.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="titulo-site">Barcelona</span>
+      <button id="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+      <nav id="navegacao">
+        <a href="index.html">Página Inicial</a>
+        <a href="#dados">Dados</a>
+        <a href="#clima">Clima</a>
+        <a href="templos.html">Templos</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Barcelona, Espanha</h1>
+
+      <picture class="hero">
+        <source
+          srcset="imagens/barcelona/barcelona-large.webp"
+          media="(min-width: 700px)"
+        />
+        <img
+          src="imagens/barcelona/barcelona-small.webp"
+          srcset="
+            imagens/barcelona/barcelona-small.webp 600w,
+            imagens/barcelona/barcelona-large.webp 1200w
+          "
+          sizes="(min-width: 700px) 1000px, 100vw"
+          alt="Vista aérea de Barcelona com a Sagrada Família ao centro"
+          width="1200"
+          height="800"
+        />
+      </picture>
+
+      <div class="conteudo">
+        <section id="dados" class="dados">
+          <h2>Dados</h2>
+          <dl>
+            <dt>Comunidade</dt>
+            <dd>Catalunha</dd>
+            <dt>População</dt>
+            <dd>1,6 milhão (cidade)</dd>
+            <dt>Idiomas</dt>
+            <dd>Catalão e Espanhol</dd>
+            <dt>Moeda</dt>
+            <dd>Euro (€)</dd>
+            <dt>Fuso horário</dt>
+            <dd>CET (UTC+1)</dd>
+          </dl>
+        </section>
+
+        <section id="clima" class="clima">
+          <h2>Clima</h2>
+          <img
+            class="icone-clima"
+            src="imagens/barcelona/clima.svg"
+            alt="Parcialmente nublado"
+            width="48"
+            height="48"
+          />
+          <p><span class="rotulo">Condição:</span> Parcialmente nublado</p>
+          <p><span class="rotulo">Temperatura:</span> 9 °C</p>
+          <p><span class="rotulo">Vento:</span> 10 km/h</p>
+          <p>
+            <span class="rotulo">Sensação térmica:</span>
+            <span id="sensacaoTermica">N/A</span>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="anoatual"></span> Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>

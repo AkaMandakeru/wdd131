@@ -1,0 +1,202 @@
+:root {
+  --cor-primaria: #aa151b;
+  --cor-secundaria: #c60b1e;
+  --cor-destaque: #ffc400;
+  --cor-fundo: #f6f3ee;
+  --cor-cartao: #ffffff;
+  --cor-texto: #241c1c;
+  --fonte-titulo: "Poppins", sans-serif;
+  --fonte-corpo: "Nunito Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-corpo);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+  position: relative;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.titulo-site {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cor-destaque);
+}
+
+/* ---------- Botão hambúrguer ---------- */
+#menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ---------- Navegação ---------- */
+nav {
+  display: none;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+nav.aberto {
+  display: flex;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+/* ---------- Conteúdo principal ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h1 {
+  font-family: var(--fonte-titulo);
+  text-align: center;
+  color: var(--cor-primaria);
+}
+
+/* ---------- Imagem hero ---------- */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(36, 28, 28, 0.18);
+}
+
+/* ---------- Blocos de conteúdo ---------- */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+section {
+  background-color: var(--cor-cartao);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(36, 28, 28, 0.12);
+}
+
+section h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-secundaria);
+  margin: 0 0 0.75rem;
+  border-bottom: 3px solid var(--cor-destaque);
+  padding-bottom: 0.35rem;
+}
+
+/* ---------- Seção de dados ---------- */
+.dados dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1rem;
+}
+
+.dados dt {
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.dados dd {
+  margin: 0;
+}
+
+/* ---------- Seção de clima ---------- */
+.clima .icone-clima {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.clima .rotulo {
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.clima p {
+  margin: 0.35rem 0;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- Visão mais ampla ---------- */
+@media (min-width: 700px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  nav a {
+    border-top: none;
+    border-radius: 4px;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  /* Emoji do clima após o título "Clima" na visão larga */
+  .clima h2::after {
+    content: " ⛅";
+  }
+
+  /* Na visão larga usamos o emoji; o ícone SVG fica oculto */
+  .clima .icone-clima {
+    display: none;
+  }
+}
