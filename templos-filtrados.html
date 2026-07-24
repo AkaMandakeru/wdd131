@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Álbum do Templo Filtrado - Jean Felipe da Silva</title>
+    <meta
+      name="description"
+      content="Álbum de fotos de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias com filtragem dinâmica, criado por Jean Felipe da Silva para o curso WDD 131."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/templos-filtrados.css" />
+    <link rel="stylesheet" href="estilos/templos-filtrados-grandes.css" />
+
+    <script src="scripts/templos-dados.js" defer></script>
+    <script src="scripts/templos-filtrados.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="titulo-site">Álbum do Templo</span>
+      <button id="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+      <nav id="navegacao">
+        <a href="#" data-filtro="todos" class="ativo">Página Inicial</a>
+        <a href="#" data-filtro="antigos">Antigo</a>
+        <a href="#" data-filtro="novos">Novo</a>
+        <a href="#" data-filtro="grandes">Grande</a>
+        <a href="#" data-filtro="pequenos">Pequeno</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Álbum do Templo</h1>
+
+      <div class="galeria" id="galeria"></div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="anoatual"></span> Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>
