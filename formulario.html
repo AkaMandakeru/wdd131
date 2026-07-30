@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Avaliação de Produto - Jean Felipe da Silva</title>
+    <meta
+      name="description"
+      content="Formulário de avaliação de produto, criado por Jean Felipe da Silva para o curso WDD 131."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/formulario.css" />
+
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/formulario.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="titulo-site">Avaliação de Produto</span>
+      <button id="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+      <nav id="navegacao">
+        <a href="index.html">Página Inicial</a>
+        <a href="local.html">Local</a>
+        <a href="templos-filtrados.html">Templos</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Avaliação de Produto</h1>
+
+      <form method="get" action="avaliacao.html" class="formulario-avaliacao">
+        <label for="nomeProduto">
+          Nome do Produto
+          <select id="nomeProduto" name="nomeProduto" required>
+            <option value="" disabled selected>Selecione um Produto...</option>
+          </select>
+        </label>
+
+        <fieldset class="classificacao">
+          <legend>Classificação Geral</legend>
+          <div class="estrelas">
+            <input type="radio" id="nota1" name="classificacao" value="1" required />
+            <label for="nota1" aria-label="1 estrela">&star;</label>
+
+            <input type="radio" id="nota2" name="classificacao" value="2" />
+            <label for="nota2" aria-label="2 estrelas">&star;</label>
+
+            <input type="radio" id="nota3" name="classificacao" value="3" />
+            <label for="nota3" aria-label="3 estrelas">&star;</label>
+
+            <input type="radio" id="nota4" name="classificacao" value="4" />
+            <label for="nota4" aria-label="4 estrelas">&star;</label>
+
+            <input type="radio" id="nota5" name="classificacao" value="5" />
+            <label for="nota5" aria-label="5 estrelas">&star;</label>
+          </div>
+        </fieldset>
+
+        <label for="dataInstalacao">
+          Data de Instalação
+          <input type="date" id="dataInstalacao" name="dataInstalacao" required />
+        </label>
+
+        <fieldset class="recursos">
+          <legend>Recursos Úteis</legend>
+          <label class="checkbox">
+            <input type="checkbox" id="recursoDurabilidade" name="recursos" value="durabilidade" />
+            Durabilidade
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="recursoCustoBeneficio" name="recursos" value="custo-beneficio" />
+            Custo-benefício
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="recursoDesempenho" name="recursos" value="desempenho" />
+            Desempenho
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="recursoDesign" name="recursos" value="design" />
+            Design
+          </label>
+        </fieldset>
+
+        <label for="avaliacaoEscrita">
+          Avaliação Escrita (opcional)
+          <textarea id="avaliacaoEscrita" name="avaliacaoEscrita" rows="4"></textarea>
+        </label>
+
+        <label for="nomeUsuario">
+          Nome de Usuário (opcional)
+          <input type="text" id="nomeUsuario" name="nomeUsuario" />
+        </label>
+
+        <input type="submit" value="Enviar Avaliação" class="botao-enviar" />
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="anoatual"></span> Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>

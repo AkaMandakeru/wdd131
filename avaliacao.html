@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Avaliação Enviada - Jean Felipe da Silva</title>
+    <meta
+      name="description"
+      content="Confirmação de envio do formulário de avaliação de produto, criada por Jean Felipe da Silva para o curso WDD 131."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/formulario.css" />
+
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/avaliacao.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="titulo-site">Avaliação de Produto</span>
+      <button id="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+      <nav id="navegacao">
+        <a href="index.html">Página Inicial</a>
+        <a href="formulario.html">Nova Avaliação</a>
+        <a href="local.html">Local</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Avaliação Enviada</h1>
+
+      <section class="confirmacao">
+        <h2>Obrigado pela sua avaliação!</h2>
+        <p class="contador">
+          Você já concluiu <span id="totalAvaliacoes">0</span> avaliação(ões).
+        </p>
+
+        <dl id="resumo"></dl>
+
+        <a class="voltar" href="formulario.html">Enviar outra avaliação</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="anoatual"></span> Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>
