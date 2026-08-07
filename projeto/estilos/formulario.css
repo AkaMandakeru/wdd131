@@ -1,0 +1,186 @@
+/* ---------------------------------------------------------------------------
+   MusicList — formulário de sugestão e página de confirmação
+   --------------------------------------------------------------------------- */
+
+:root {
+  --estrela: #b8860b;
+  --erro: #b3261e;
+}
+
+:root[data-tema="escuro"] {
+  --erro: #ffb4ab;
+}
+
+.formulario,
+.confirmacao {
+  max-width: 640px;
+  margin: 1.5rem 0 0;
+  padding: 1.5rem 1.25rem;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+/* ---------- Campos ---------- */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0 0 1.25rem;
+}
+
+.campo label {
+  font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 0.65rem 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.ajuda {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+}
+
+abbr[title] {
+  color: var(--erro);
+  text-decoration: none;
+}
+
+/* ---------- Conjuntos de opções ---------- */
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+legend {
+  padding: 0 0.4rem;
+  font-family: var(--titulo);
+  font-weight: 700;
+}
+
+.grupo-caixas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.caixa {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.caixa input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--primaria);
+}
+
+.erro {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  color: var(--erro);
+}
+
+.envio {
+  margin: 1.5rem 0 0;
+}
+
+/* ---------- Nota em estrelas ---------- */
+.estrelas {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.estrelas input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.estrelas label {
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.estrelas label::before {
+  content: "☆";
+}
+
+.estrelas input:checked ~ label,
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+  color: var(--estrela);
+}
+
+.estrelas input:checked ~ label::before,
+.estrelas label:hover::before,
+.estrelas label:hover ~ label::before {
+  content: "★";
+}
+
+.estrelas input:focus-visible + label {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+/* ---------- Confirmação ---------- */
+.saudacao {
+  margin-top: 0;
+  color: var(--primaria);
+}
+
+.total {
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.resumo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem 1rem;
+  margin: 0 0 1.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--borda);
+}
+
+.resumo dt {
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.resumo dd {
+  margin: 0 0 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .resumo {
+    grid-template-columns: 12rem 1fr;
+  }
+
+  .resumo dd {
+    margin-bottom: 0.35rem;
+  }
+}

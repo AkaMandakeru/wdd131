@@ -1,0 +1,136 @@
+/* ---------------------------------------------------------------------------
+   MusicList — catálogo de músicas
+   Barra de filtros, contagem de resultados e botão de favoritar.
+   --------------------------------------------------------------------------- */
+
+.filtros {
+  margin: 1.5rem 0 1rem;
+  padding: 1.15rem;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0;
+}
+
+.campo label {
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.campo input,
+.campo select {
+  padding: 0.6rem 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chip {
+  padding: 0.45rem 1rem;
+  font-family: var(--titulo);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--texto);
+  background-color: var(--superficie-suave);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--primaria);
+}
+
+.chip.ativo {
+  color: #ffffff;
+  background-color: var(--primaria);
+  border-color: var(--primaria);
+}
+
+:root[data-tema="escuro"] .chip.ativo {
+  color: #16112c;
+}
+
+.contagem {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.sem-resultados {
+  padding: 1rem 1.15rem;
+  background-color: var(--superficie);
+  border: 1px dashed var(--borda);
+  border-radius: var(--raio);
+  color: var(--texto-suave);
+}
+
+.cartao-musica .descricao {
+  color: var(--texto-suave);
+}
+
+/* Reserva a altura mínima da galeria enquanto o JavaScript monta os cartões,
+   para que o rodapé não salte no carregamento. A classe é removida depois da
+   primeira montagem, então filtros com poucos resultados não deixam espaço em
+   branco. O valor maior vale para o layout de uma coluna. */
+#galeria.reservando {
+  min-height: 2550px;
+}
+
+@media (max-width: 560px) {
+  #galeria.reservando {
+    min-height: 7500px;
+  }
+}
+
+.botao-favorito {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--primaria);
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.botao-favorito:hover {
+  border-color: var(--primaria);
+}
+
+.botao-favorito[aria-pressed="true"] {
+  color: #ffffff;
+  background-color: var(--primaria);
+  border-color: var(--primaria);
+}
+
+:root[data-tema="escuro"] .botao-favorito[aria-pressed="true"] {
+  color: #16112c;
+}

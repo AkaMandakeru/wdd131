@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicList – Descubra e organize suas músicas favoritas</title>
+    <meta
+      name="description"
+      content="MusicList reúne músicas organizadas por categoria e playlists prontas para estudar, treinar, relaxar ou viajar. Projeto final de WDD 131 por Jean Felipe da Silva."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/base.css" />
+    <link rel="stylesheet" href="estilos/catalogo.css" />
+    <link rel="stylesheet" href="estilos/inicio.css" />
+
+    <script src="scripts/dados.js" defer></script>
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/inicio.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.svg" alt="" width="40" height="40" />
+          <span>MusicList</span>
+        </a>
+
+        <div class="acoes">
+          <button
+            type="button"
+            id="alternarTema"
+            class="botao-icone"
+            aria-pressed="false"
+            aria-label="Mudar para o tema escuro"
+          >
+            ☾
+          </button>
+          <button
+            type="button"
+            id="botaoMenu"
+            class="botao-icone"
+            aria-controls="navegacao"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        <nav id="navegacao" aria-label="Navegação principal">
+          <a class="atual" href="index.html" aria-current="page">Início</a>
+          <a href="musicas.html">Músicas</a>
+          <a href="playlists.html">
+            Playlists
+            <span class="contador" id="contadorFavoritos" hidden>
+              <span class="visualmente-oculto">favoritas:</span>
+              <span class="numero">0</span>
+            </span>
+          </a>
+          <a href="sugerir.html">Sugerir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="principal">
+      <section class="capa">
+        <img
+          class="capa-imagem"
+          src="imagens/destaque.svg"
+          alt="Ilustração de um equalizador de áudio com notas musicais"
+          width="1200"
+          height="600"
+          fetchpriority="high"
+        />
+        <div class="capa-texto">
+          <p class="etiqueta">Projeto final · WDD 131</p>
+          <h1>Descubra e organize suas músicas favoritas</h1>
+          <p class="chamada">
+            O MusicList reúne músicas separadas por categoria e playlists prontas para
+            cada momento do dia. Navegue pelo acervo, salve o que você gosta e monte a
+            sua própria lista.
+          </p>
+          <p class="aviso" id="aviso" role="status"></p>
+          <p class="botoes">
+            <a class="botao-principal" href="musicas.html">Ver o catálogo</a>
+            <a class="botao-secundario" href="playlists.html">Playlists por ocasião</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="secao" aria-labelledby="tituloNumeros">
+        <h2 id="tituloNumeros">O acervo em números</h2>
+        <div class="numeros reservando" id="numeros"></div>
+      </section>
+
+      <section class="secao" aria-labelledby="tituloDestaques">
+        <h2 id="tituloDestaques">Destaques da semana</h2>
+        <p class="apoio">
+          Uma seleção com uma faixa marcante de cada categoria, para quem está chegando
+          agora ao site.
+        </p>
+        <ul class="grade-destaques reservando" id="destaques"></ul>
+      </section>
+
+      <section class="secao" aria-labelledby="tituloGeneros">
+        <h2 id="tituloGeneros">Navegue por categoria</h2>
+        <p class="apoio">
+          Cada categoria abre o catálogo já filtrado. As músicas trazem título, artista,
+          ano e uma breve descrição.
+        </p>
+        <ul class="grade-generos reservando" id="generos"></ul>
+      </section>
+
+      <section class="secao chamada-final" aria-labelledby="tituloSugestao">
+        <h2 id="tituloSugestao">Falta alguma música aqui?</h2>
+        <p>
+          O acervo cresce com a ajuda de quem visita o site. Envie a sua sugestão e conte
+          em qual ocasião ela combina melhor.
+        </p>
+        <p><a class="botao-principal" href="sugerir.html">Sugerir uma música</a></p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; <span id="anoAtual"></span> MusicList · Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+      <p><a href="referencias.html">Referências e fontes consultadas</a></p>
+    </footer>
+  </body>
+</html>

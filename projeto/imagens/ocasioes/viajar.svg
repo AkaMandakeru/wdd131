@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <defs>
+    <linearGradient id="fundoViajar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b8a6b" />
+      <stop offset="1" stop-color="#0d3a52" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#fundoViajar)" />
+  <circle cx="358" cy="172" r="46" fill="#ffe29a" opacity="0.92" />
+  <path d="M0 252 Q90 210 180 246 T330 236 T480 252 V480 H0 Z" fill="#0a2b3d" opacity="0.5" />
+  <path d="M212 248 L268 248 L376 420 L104 420 Z" fill="#ffffff" opacity="0.9" />
+  <g fill="#0a2b3d" opacity="0.75">
+    <rect x="234" y="258" width="12" height="26" rx="6" />
+    <rect x="232" y="300" width="16" height="32" rx="8" />
+    <rect x="229" y="350" width="22" height="40" rx="11" />
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4">
+    <path d="M62 300 Q96 240 62 180" />
+    <path d="M418 300 Q384 240 418 180" />
+  </g>
+</svg>

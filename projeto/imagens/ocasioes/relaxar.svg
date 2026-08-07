@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <defs>
+    <linearGradient id="fundoRelaxar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#231b4f" />
+      <stop offset="1" stop-color="#0e4a63" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#fundoRelaxar)" />
+  <path d="M318 84 A96 96 0 1 0 318 252 A78 78 0 0 1 318 84 Z" fill="#ffe29a" opacity="0.95" />
+  <g fill="#ffffff" opacity="0.85">
+    <circle cx="120" cy="96" r="7" />
+    <circle cx="180" cy="52" r="5" />
+    <circle cx="86" cy="176" r="5" />
+    <circle cx="404" cy="196" r="6" />
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.5">
+    <path d="M52 336 Q112 300 172 336 T292 336 T412 336" />
+    <path d="M52 390 Q112 354 172 390 T292 390 T412 390" />
+    <path d="M52 444 Q112 408 172 444 T292 444 T412 444" />
+  </g>
+</svg>

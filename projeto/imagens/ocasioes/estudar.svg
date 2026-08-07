@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <defs>
+    <linearGradient id="fundoEstudar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6f8b" />
+      <stop offset="1" stop-color="#123b57" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#fundoEstudar)" />
+  <g fill="#ffffff" opacity="0.95">
+    <path d="M96 148 Q170 118 236 152 V368 Q170 334 96 364 Z" />
+    <path d="M384 148 Q310 118 244 152 V368 Q310 334 384 364 Z" opacity="0.8" />
+  </g>
+  <rect x="234" y="146" width="12" height="224" rx="6" fill="#0d2a3d" opacity="0.6" />
+  <g fill="#ffd166" opacity="0.95">
+    <ellipse cx="330" cy="106" rx="22" ry="17" transform="rotate(-18 330 106)" />
+    <rect x="346" y="34" width="9" height="74" rx="4" />
+    <path d="M346 34 L392 26 L392 50 L346 58 Z" />
+  </g>
+</svg>

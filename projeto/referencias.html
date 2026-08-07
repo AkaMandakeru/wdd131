@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Referências – MusicList</title>
+    <meta
+      name="description"
+      content="Fontes consultadas para os dados das músicas do MusicList e informações sobre a autoria das ilustrações do site."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/base.css" />
+
+    <script src="scripts/comum.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.svg" alt="" width="40" height="40" />
+          <span>MusicList</span>
+        </a>
+
+        <div class="acoes">
+          <button
+            type="button"
+            id="alternarTema"
+            class="botao-icone"
+            aria-pressed="false"
+            aria-label="Mudar para o tema escuro"
+          >
+            ☾
+          </button>
+          <button
+            type="button"
+            id="botaoMenu"
+            class="botao-icone"
+            aria-controls="navegacao"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        <nav id="navegacao" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="musicas.html">Músicas</a>
+          <a href="playlists.html">
+            Playlists
+            <span class="contador" id="contadorFavoritos" hidden>
+              <span class="visualmente-oculto">favoritas:</span>
+              <span class="numero">0</span>
+            </span>
+          </a>
+          <a href="sugerir.html">Sugerir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="principal">
+      <h1>Referências</h1>
+
+      <h2>Ilustrações e identidade visual</h2>
+      <p>
+        Todas as ilustrações do site (logotipo, imagem de capa, artes das categorias e das
+        playlists) são arquivos SVG criados pelo autor do projeto especialmente para o
+        MusicList. Nenhum modelo, tema ou biblioteca de terceiros foi utilizado.
+      </p>
+
+      <h2>Dados das músicas</h2>
+      <p>
+        Título, artista e ano de lançamento de cada faixa foram conferidos nas páginas
+        públicas das enciclopédias e bases de dados musicais listadas abaixo. As
+        descrições curtas de cada música e de cada playlist são textos autorais,
+        escritos para este projeto.
+      </p>
+      <ul>
+        <li>
+          <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener"
+            >Wikipédia em português</a
+          >
+          — verbetes das músicas, dos artistas e dos álbuns citados.
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/" target="_blank" rel="noopener"
+            >Wikipedia (inglês)</a
+          >
+          — verbetes das faixas internacionais.
+        </li>
+        <li>
+          <a href="https://musicbrainz.org/" target="_blank" rel="noopener">MusicBrainz</a>
+          — conferência dos anos de lançamento e da grafia dos nomes.
+        </li>
+        <li>
+          <a href="https://www.discogs.com/" target="_blank" rel="noopener">Discogs</a>
+          — conferência de créditos e participações nas faixas.
+        </li>
+      </ul>
+
+      <h2>Documentação técnica</h2>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web"
+            target="_blank"
+            rel="noopener"
+            >MDN Web Docs</a
+          >
+          — referência de HTML, CSS e JavaScript usada durante o desenvolvimento.
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener"
+            >WCAG 2.2 Quick Reference (W3C)</a
+          >
+          — critérios de acessibilidade aplicados ao contraste, aos rótulos e à navegação
+          por teclado.
+        </li>
+        <li>
+          <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a>
+          — famílias tipográficas Space Grotesk e Nunito Sans, distribuídas sob licença
+          livre.
+        </li>
+      </ul>
+
+      <h2>Sobre o projeto</h2>
+      <p>
+        MusicList é o projeto final do curso WDD 131 – Fundamentos da Web Dinâmica, da
+        Universidade Brigham Young–Idaho, desenvolvido individualmente por Jean Felipe da
+        Silva. O conteúdo tem finalidade educacional e o site não comercializa nem
+        distribui gravações musicais.
+      </p>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; <span id="anoAtual"></span> MusicList · Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+      <p><a href="index.html">Voltar à página inicial</a></p>
+    </footer>
+  </body>
+</html>

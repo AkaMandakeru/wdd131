@@ -1,0 +1,105 @@
+/* ---------------------------------------------------------------------------
+   MusicList — playlists
+   Lista de faixas de cada playlist e a playlist montada pelo visitante.
+   --------------------------------------------------------------------------- */
+
+.alternar-faixas {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+}
+
+.faixas {
+  margin: 0;
+  padding: 0 1.15rem 1.15rem;
+  list-style: none;
+  counter-reset: faixa;
+}
+
+.faixas li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.6rem 0 0.6rem 2rem;
+  border-top: 1px solid var(--borda);
+  counter-increment: faixa;
+  position: relative;
+}
+
+.faixas li::before {
+  content: counter(faixa) ".";
+  position: absolute;
+  left: 0;
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--primaria);
+}
+
+.faixa-titulo {
+  font-weight: 700;
+}
+
+.faixa-artista {
+  color: var(--texto-suave);
+}
+
+/* Reserva a altura mínima da lista montada pelo JavaScript, removida assim que
+   os cartões entram na página. */
+#playlists.reservando {
+  min-height: 780px;
+}
+
+/* ---------- Minha playlist ---------- */
+.minha-secao {
+  padding: 1.5rem 1.25rem;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.resumo {
+  max-width: 60ch;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.lista-favoritos {
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-favorito {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--borda);
+}
+
+.item-favorito h3 {
+  margin: 0;
+}
+
+.item-favorito .artista {
+  margin: 0 0 0.2rem;
+}
+
+.botao-remover {
+  padding: 0.45rem 0.9rem;
+  font-family: var(--titulo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primaria);
+  background-color: var(--superficie-suave);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.botao-remover:hover {
+  border-color: var(--primaria);
+}

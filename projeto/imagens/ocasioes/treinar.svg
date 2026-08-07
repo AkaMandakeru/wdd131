@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <defs>
+    <linearGradient id="fundoTreinar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8452c" />
+      <stop offset="1" stop-color="#7a1338" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#fundoTreinar)" />
+  <path
+    d="M40 246 H136 L172 158 L228 330 L272 214 L306 246 H440"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="16"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.35"
+  />
+  <g fill="#ffffff" opacity="0.95">
+    <rect x="70" y="196" width="44" height="88" rx="16" />
+    <rect x="366" y="196" width="44" height="88" rx="16" />
+    <rect x="122" y="168" width="52" height="144" rx="20" />
+    <rect x="306" y="168" width="52" height="144" rx="20" />
+    <rect x="166" y="216" width="148" height="48" rx="18" />
+  </g>
+</svg>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlists por ocasião – MusicList</title>
+    <meta
+      name="description"
+      content="Playlists do MusicList para estudar, treinar, relaxar e viajar, além da playlist montada com as músicas que você salvou como favoritas."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/base.css" />
+    <link rel="stylesheet" href="estilos/catalogo.css" />
+    <link rel="stylesheet" href="estilos/playlists.css" />
+
+    <script src="scripts/dados.js" defer></script>
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/playlists.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.svg" alt="" width="40" height="40" />
+          <span>MusicList</span>
+        </a>
+
+        <div class="acoes">
+          <button
+            type="button"
+            id="alternarTema"
+            class="botao-icone"
+            aria-pressed="false"
+            aria-label="Mudar para o tema escuro"
+          >
+            ☾
+          </button>
+          <button
+            type="button"
+            id="botaoMenu"
+            class="botao-icone"
+            aria-controls="navegacao"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        <nav id="navegacao" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="musicas.html">Músicas</a>
+          <a class="atual" href="playlists.html" aria-current="page">
+            Playlists
+            <span class="contador" id="contadorFavoritos" hidden>
+              <span class="visualmente-oculto">favoritas:</span>
+              <span class="numero">0</span>
+            </span>
+          </a>
+          <a href="sugerir.html">Sugerir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="principal">
+      <h1>Playlists por ocasião</h1>
+      <p class="apoio">
+        Quatro seleções pensadas para momentos diferentes do dia. Abra cada uma para ver
+        as faixas que fazem parte dela.
+      </p>
+
+      <section aria-labelledby="tituloProntas">
+        <h2 id="tituloProntas" class="visualmente-oculto">Playlists prontas</h2>
+        <ul class="grade-playlists reservando" id="playlists"></ul>
+      </section>
+
+      <section class="minha-secao" aria-labelledby="tituloMinha">
+        <h2 id="tituloMinha">Minha playlist</h2>
+        <p class="resumo" id="resumoPlaylist" role="status"></p>
+
+        <button type="button" class="botao-secundario" id="limparPlaylist" hidden>
+          Limpar minha playlist
+        </button>
+
+        <ul class="lista-favoritos" id="minhaPlaylist"></ul>
+
+        <p class="apoio">
+          As músicas salvas ficam guardadas apenas neste navegador, então a sua lista
+          continua aqui na próxima visita.
+        </p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; <span id="anoAtual"></span> MusicList · Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+      <p><a href="referencias.html">Referências e fontes consultadas</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugestão enviada – MusicList</title>
+    <meta
+      name="description"
+      content="Confirmação da sugestão enviada ao MusicList, com o resumo dos dados informados no formulário."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/base.css" />
+    <link rel="stylesheet" href="estilos/formulario.css" />
+
+    <script src="scripts/dados.js" defer></script>
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/enviado.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.svg" alt="" width="40" height="40" />
+          <span>MusicList</span>
+        </a>
+
+        <div class="acoes">
+          <button
+            type="button"
+            id="alternarTema"
+            class="botao-icone"
+            aria-pressed="false"
+            aria-label="Mudar para o tema escuro"
+          >
+            ☾
+          </button>
+          <button
+            type="button"
+            id="botaoMenu"
+            class="botao-icone"
+            aria-controls="navegacao"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        <nav id="navegacao" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="musicas.html">Músicas</a>
+          <a href="playlists.html">
+            Playlists
+            <span class="contador" id="contadorFavoritos" hidden>
+              <span class="visualmente-oculto">favoritas:</span>
+              <span class="numero">0</span>
+            </span>
+          </a>
+          <a class="atual" href="sugerir.html" aria-current="page">Sugerir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="principal">
+      <h1>Sugestão enviada</h1>
+
+      <section class="confirmacao" aria-labelledby="tituloConfirmacao">
+        <h2 id="tituloConfirmacao" class="saudacao">
+          <span id="saudacao">Obrigado! Sua sugestão foi registrada.</span>
+        </h2>
+        <p class="total" id="totalSugestoes"></p>
+
+        <h3>Resumo do que você enviou</h3>
+        <dl class="resumo" id="resumo"></dl>
+
+        <p class="botoes">
+          <a class="botao-principal" href="sugerir.html">Enviar outra sugestão</a>
+          <a class="botao-secundario" href="musicas.html">Voltar ao catálogo</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; <span id="anoAtual"></span> MusicList · Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+      <p><a href="referencias.html">Referências e fontes consultadas</a></p>
+    </footer>
+  </body>
+</html>

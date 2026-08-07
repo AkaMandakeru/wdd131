@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <defs>
+    <linearGradient id="fundoSertanejo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7a325" />
+      <stop offset="1" stop-color="#8c3b12" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#fundoSertanejo)" />
+  <circle cx="240" cy="196" r="86" fill="#ffe29a" opacity="0.95" />
+  <g stroke="#ffe29a" stroke-width="9" stroke-linecap="round" opacity="0.7">
+    <path d="M240 62 V26" />
+    <path d="M240 366 V330" />
+    <path d="M106 196 H70" />
+    <path d="M410 196 H374" />
+    <path d="M145 101 L120 76" />
+    <path d="M335 101 L360 76" />
+  </g>
+  <path d="M0 372 Q120 300 240 356 T480 340 V480 H0 Z" fill="#5c2409" opacity="0.75" />
+  <path d="M0 416 Q140 362 260 408 T480 396 V480 H0 Z" fill="#3d1705" opacity="0.85" />
+</svg>

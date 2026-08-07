@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugerir uma música – MusicList</title>
+    <meta
+      name="description"
+      content="Formulário do MusicList para sugerir uma música ao acervo, indicar a categoria, dar uma nota e dizer em quais ocasiões ela combina."
+    />
+    <meta name="author" content="Jean Felipe da Silva" />
+
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/base.css" />
+    <link rel="stylesheet" href="estilos/formulario.css" />
+
+    <script src="scripts/dados.js" defer></script>
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/sugerir.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.svg" alt="" width="40" height="40" />
+          <span>MusicList</span>
+        </a>
+
+        <div class="acoes">
+          <button
+            type="button"
+            id="alternarTema"
+            class="botao-icone"
+            aria-pressed="false"
+            aria-label="Mudar para o tema escuro"
+          >
+            ☾
+          </button>
+          <button
+            type="button"
+            id="botaoMenu"
+            class="botao-icone"
+            aria-controls="navegacao"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        <nav id="navegacao" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="musicas.html">Músicas</a>
+          <a href="playlists.html">
+            Playlists
+            <span class="contador" id="contadorFavoritos" hidden>
+              <span class="visualmente-oculto">favoritas:</span>
+              <span class="numero">0</span>
+            </span>
+          </a>
+          <a class="atual" href="sugerir.html" aria-current="page">Sugerir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="principal">
+      <h1>Sugerir uma música</h1>
+      <p class="apoio">
+        Conte qual música merece entrar no acervo. Os campos marcados com
+        <abbr title="obrigatório">*</abbr> são obrigatórios.
+      </p>
+
+      <form id="formularioSugestao" class="formulario" method="get" action="enviado.html">
+        <p class="campo">
+          <label for="titulo">Nome da música <abbr title="obrigatório">*</abbr></label>
+          <input type="text" id="titulo" name="titulo" required maxlength="80" />
+        </p>
+
+        <p class="campo">
+          <label for="artista">Artista ou banda <abbr title="obrigatório">*</abbr></label>
+          <input type="text" id="artista" name="artista" required maxlength="80" />
+        </p>
+
+        <p class="campo">
+          <label for="genero">Categoria <abbr title="obrigatório">*</abbr></label>
+          <select id="genero" name="genero" required>
+            <option value="">Selecione uma categoria…</option>
+          </select>
+        </p>
+
+        <p class="campo">
+          <label for="ano">Ano de lançamento</label>
+          <input type="number" id="ano" name="ano" min="1900" max="2030" step="1" />
+        </p>
+
+        <fieldset class="notas">
+          <legend>Sua nota para a música <abbr title="obrigatório">*</abbr></legend>
+          <div class="estrelas">
+            <input type="radio" id="nota5" name="nota" value="5" required />
+            <label for="nota5"><span class="visualmente-oculto">5 estrelas</span></label>
+
+            <input type="radio" id="nota4" name="nota" value="4" />
+            <label for="nota4"><span class="visualmente-oculto">4 estrelas</span></label>
+
+            <input type="radio" id="nota3" name="nota" value="3" />
+            <label for="nota3"><span class="visualmente-oculto">3 estrelas</span></label>
+
+            <input type="radio" id="nota2" name="nota" value="2" />
+            <label for="nota2"><span class="visualmente-oculto">2 estrelas</span></label>
+
+            <input type="radio" id="nota1" name="nota" value="1" />
+            <label for="nota1"><span class="visualmente-oculto">1 estrela</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="ocasioes">
+          <legend>Combina com quais ocasiões? <abbr title="obrigatório">*</abbr></legend>
+          <p class="erro" id="erroOcasioes" role="alert" hidden>
+            Marque pelo menos uma ocasião antes de enviar.
+          </p>
+          <div class="grupo-caixas" id="ocasioes"></div>
+        </fieldset>
+
+        <p class="campo">
+          <label for="comentario">Por que você recomenda esta música?</label>
+          <textarea id="comentario" name="comentario" rows="4"></textarea>
+          <span class="ajuda" id="contadorTexto" aria-live="polite"></span>
+        </p>
+
+        <p class="campo">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="nome" maxlength="60" autocomplete="name" />
+        </p>
+
+        <p class="envio">
+          <button type="submit" class="botao-principal">Enviar sugestão</button>
+        </p>
+      </form>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; <span id="anoAtual"></span> MusicList · Jean Felipe da Silva · Paraná, Brasil</p>
+      <p id="ultimaModificacao"></p>
+      <p><a href="referencias.html">Referências e fontes consultadas</a></p>
+    </footer>
+  </body>
+</html>

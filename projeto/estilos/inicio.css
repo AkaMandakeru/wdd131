@@ -1,0 +1,116 @@
+/* ---------------------------------------------------------------------------
+   MusicList — página inicial
+   Capa, faixa de números e blocos de seção.
+   --------------------------------------------------------------------------- */
+
+.capa {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.capa-imagem {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+}
+
+.capa-texto {
+  padding: 1.5rem 1.25rem 1.75rem;
+}
+
+.chamada {
+  max-width: 60ch;
+  font-size: 1.05rem;
+  color: var(--texto-suave);
+}
+
+.aviso {
+  padding: 0.7rem 0.9rem;
+  border-left: 4px solid var(--destaque);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--superficie-suave);
+  font-weight: 600;
+}
+
+.secao {
+  margin-bottom: 2.75rem;
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.numero-item {
+  padding: 1rem;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  text-align: center;
+}
+
+.numero-item .valor {
+  display: block;
+  font-family: var(--titulo);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--primaria);
+}
+
+.numero-item .rotulo {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+/* Reserva a altura mínima dos blocos montados pelo JavaScript. A classe é
+   removida logo após a montagem, evitando que o restante da página salte
+   quando os cartões aparecem. */
+#numeros.reservando {
+  min-height: 100px;
+}
+
+#destaques.reservando {
+  min-height: 700px;
+}
+
+#generos.reservando {
+  min-height: 650px;
+}
+
+.chamada-final {
+  padding: 1.5rem 1.25rem;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.chamada-final p {
+  max-width: 60ch;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 860px) {
+  .capa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .capa-imagem {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .capa-texto {
+    padding: 2rem;
+  }
+}

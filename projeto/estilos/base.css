@@ -1,0 +1,336 @@
+/* ---------------------------------------------------------------------------
+   MusicList — estilos comuns a todas as páginas
+   Variáveis, cabeçalho, navegação, botões, rodapé e utilitários.
+   O tema escuro é ativado pelo atributo data-tema no elemento <html>.
+   --------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  --fundo: #f5f4fb;
+  --superficie: #ffffff;
+  --superficie-suave: #ece9f7;
+  --borda: #d5cfe8;
+  --texto: #1b1630;
+  --texto-suave: #4d4570;
+  --primaria: #4a2fa8;
+  --primaria-clara: #6b4ad0;
+  --destaque: #0f7d7d;
+  --sombra: 0 2px 12px rgba(27, 22, 48, 0.12);
+
+  --titulo: "Space Grotesk", "Trebuchet MS", sans-serif;
+  --corpo: "Nunito Sans", "Segoe UI", sans-serif;
+  --largura: 1080px;
+  --raio: 12px;
+}
+
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+
+  --fundo: #131022;
+  --superficie: #1e1938;
+  --superficie-suave: #2a2350;
+  --borda: #3d3568;
+  --texto: #f1eefb;
+  --texto-suave: #c0b7e2;
+  --primaria: #a98cff;
+  --primaria-clara: #c3aeff;
+  --destaque: #57d6d6;
+  --sombra: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: var(--corpo);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--titulo);
+  line-height: 1.25;
+  color: var(--texto);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3.5vw, 1.8rem);
+  margin: 0 0 0.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.25rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--primaria);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+/* ---------- Utilitários ---------- */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pular {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 10;
+  padding: 0.7rem 1rem;
+  background-color: var(--superficie);
+  color: var(--texto);
+  font-weight: 700;
+}
+
+.pular:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  font-family: var(--titulo);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--destaque);
+}
+
+.apoio {
+  max-width: 62ch;
+  color: var(--texto-suave);
+}
+
+/* ---------- Cabeçalho e navegação ---------- */
+.cabecalho {
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borda);
+}
+
+.barra {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--titulo);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.acoes {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.botao-icone {
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--texto);
+  background-color: var(--superficie-suave);
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.botao-icone:hover {
+  background-color: var(--borda);
+}
+
+#navegacao {
+  display: none;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  border-top: 1px solid var(--borda);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+#navegacao.aberto {
+  display: flex;
+}
+
+#navegacao a {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  color: var(--texto);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#navegacao a:hover {
+  background-color: var(--superficie-suave);
+}
+
+#navegacao a.atual {
+  color: var(--primaria);
+  box-shadow: inset 3px 0 0 var(--primaria);
+}
+
+.contador {
+  min-width: 1.5rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background-color: var(--primaria);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+:root[data-tema="escuro"] .contador {
+  color: #1b1630;
+}
+
+/* ---------- Conteúdo ---------- */
+main {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ---------- Botões e chamadas ---------- */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.botao-principal,
+.botao-secundario {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  font-family: var(--titulo);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-principal {
+  background-color: var(--primaria);
+  border: 2px solid var(--primaria);
+  color: #ffffff;
+}
+
+:root[data-tema="escuro"] .botao-principal {
+  color: #16112c;
+}
+
+.botao-principal:hover {
+  background-color: var(--primaria-clara);
+  border-color: var(--primaria-clara);
+}
+
+.botao-secundario {
+  background-color: transparent;
+  border: 2px solid var(--primaria);
+  color: var(--primaria);
+}
+
+.botao-secundario:hover {
+  background-color: var(--superficie-suave);
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: var(--superficie);
+  border-top: 1px solid var(--borda);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.rodape p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- Telas médias e grandes ---------- */
+@media (min-width: 700px) {
+  .barra {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  #botaoMenu {
+    display: none;
+  }
+
+  #navegacao {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .acoes {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #navegacao a.atual {
+    box-shadow: inset 0 -3px 0 var(--primaria);
+  }
+
+  main {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+}
